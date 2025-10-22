@@ -1,2 +1,10 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-@import "./carousel.css";
+/* resources/css/app.css */
+
+/* 1. Import Framework */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* 2. Import Komponen */
+@import './components/_navbar.css';
+@import './components/_homepage_content.css';
+@import './components/_article.css';
+@import './components/_kontak.css';

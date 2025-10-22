@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // DIPERBAIKI: Arahkan ke file home.blade.php di dalam folder 'pages'
+        return view('pages.home'); 
     }
 }

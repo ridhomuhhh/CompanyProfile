@@ -1,0 +1,48 @@
+/* resources/css/components/_navbar.css */
+
+/* ===== Kustomisasi Header ===== */
+
+/* Mengatur font dan warna di Top Bar */
+.header-top {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Mengatur link di Top Bar */
+  .header-top a {
+    transition: color 0.3s;
+  }
+  .header-top a:hover {
+    color: #0d6efd !important; /* Warna biru primary Bootstrap */
+  }
+  
+  /* Mengatur link navigasi utama (Home, Berita, dll) */
+  .navbar-nav .nav-link {
+    font-weight: 600;
+    color: #333;
+    position: relative; /* Diperlukan untuk garis bawah */
+    padding-bottom: 0.5rem; /* Beri ruang untuk garis bawah */
+  }
+  
+  /* Styling untuk link yang 'active' (garis bawah biru) */
+  .navbar-nav .nav-link.active {
+    color: #0d6efd !important; /* Warna biru primary */
+  }
+  
+  /* Membuat elemen pseudo '::after' untuk garis bawah */
+  .navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.5rem; /* (padding-left dari nav-link) */
+    right: 0.5rem; /* (padding-right dari nav-link) */
+    height: 3px;
+    background-color: #0d6efd;
+    border-radius: 2px;
+  }
+  
+  /* Styling untuk tombol "Pesan Sekarang" */
+  .navbar .btn {
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+  }

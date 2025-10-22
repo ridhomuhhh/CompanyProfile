@@ -1,0 +1,18 @@
+/* resources/css/components/_article-card.css */
+
+/* Memberi efek 'lift' saat card di-hover */
+.card.shadow-sm {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Opsional: Hapus border agar lebih bersih */
+}
+
+.card.shadow-sm:hover {
+    transform: translateY(-5px); /* Efek terangkat */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Bayangan lebih kuat */
+}
+
+/* Memastikan semua gambar berita punya rasio yang sama */
+.card-img-top {
+    aspect-ratio: 16 / 10; /* Rasio 16:10, umum untuk berita */
+    object-fit: cover; /* Mencegah gambar menjadi gepeng */
+}
