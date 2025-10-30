@@ -31,7 +31,7 @@
         <div class="container-fluid">
             
             <a class="navbar-brand" href="#">
-                <img src="..." alt="Logo Koperasi" style="height: 50px;">
+                <img src="{{ asset('images/logo-tsm.png') }}" alt="Logo Koperasi" style="height: 70px;">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
 
             <div class="collapse navbar-collapse" id="mainNavbar">
                 
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-4">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" 
@@ -52,6 +52,12 @@
                         <a class="nav-link {{ request()->is('berita*') ? 'active' : '' }}" 
                             href="{{ url('/berita') }}">
                             Berita
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('produk') ? 'active' : '' }}" 
+                            href="{{ url('/produk') }}">
+                            Produk
                         </a>
                     </li>
                     <li class="nav-item">

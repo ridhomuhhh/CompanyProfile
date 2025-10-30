@@ -21,6 +21,10 @@ Route::get('/kontak', function () {
     return view('pages.kontak');
 })->name('kontak');
 
+Route::get('/produk', function () {
+    return view('pages.products');
+})->name('produk');
+
 Auth::routes();
 
 // Rute ini sudah benar (memanggil HomeController)

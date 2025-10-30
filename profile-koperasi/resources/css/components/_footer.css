@@ -1,0 +1,93 @@
+/* resources/css/components/_footer.css */
+
+.site-footer {
+    /* Mengambil warna biru tua dari gambar Anda */
+    background-color: #001f3f; 
+    color: #f8f9fa; /* Teks terang */
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    position: relative;
+    /* Anda bisa menambahkan gambar bintang-bintang di sini */
+    /* background-image: url('/images/sparkles.png'); */
+}
+
+/* Logo yang menjorok di atas footer */
+.footer-logo-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 6px solid #001f3f;
+}
+
+.footer-logo-top img {
+    height: 60px;
+    width: 60px;
+}
+
+.footer-title {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #ced4da; /* Warna abu-abu terang */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Info Kontak dengan Ikon */
+.footer-info-item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 0.75rem;
+    color: #ced4da;
+}
+
+.footer-info-item i {
+    color: white;
+    margin-right: 10px;
+    margin-top: 5px; /* Sedikit ke bawah agar sejajar */
+}
+
+/* Ikon Media Sosial */
+.social-icons a {
+    color: #ced4da;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+/* Garis pemisah di bawah */
+.footer-divider {
+    border-top: 1px solid #003366; /* Biru yang lebih terang */
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.footer-bottom-bar {
+    text-align: center;
+    color: #adb5bd; /* Abu-abu paling pudar */
+}

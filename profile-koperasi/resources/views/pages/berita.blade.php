@@ -18,9 +18,9 @@
             <div class="card shadow-sm h-100">
                 <img src="https://via.placeholder.com/400x250?text=Berita+1" class="card-img-top" alt="Judul Berita 1">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Penyuluhan UKM Sukses Digelar di Tiga Wilayah</h5>
-                    <p class="card-text text-muted small">22 Oktober 2025 | Kategori: Acara</p>
-                    <p class="card-text">Koperasi BUMI sukses mengadakan penyuluhan bagi para pelaku UKM untuk meningkatkan kualitas produk...</p>
+                    <h5 class="card-title fw-bold">Judul Beria 1</h5>
+                    <p class="card-text text-muted small">DD/MM/YYYY</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a eleifend velit.... </p>
                     <a href="#" class="btn btn-primary mt-auto align-self-start">Baca Selengkapnya</a>
                 </div>
             </div>
@@ -28,11 +28,11 @@
 
         <div class="col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://via.placeholder.com/400x250?text=Berita+2" class="card-img-top" alt="Judul Berita 2">
+                <img src="https://via.placeholder.com/400x250?text=Berita+2" class="card-img-top" alt="Judul Berita 1">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Kerjasama Baru dengan Pemasok Bahan Baku Lokal</h5>
-                    <p class="card-text text-muted small">21 Oktober 2025 | Kategori: Kemitraan</p>
-                    <p class="card-text">Langkah strategis diambil untuk menjamin ketersediaan bahan baku berkualitas bagi seluruh anggota...</p>
+                    <h5 class="card-title fw-bold">Judul Berita 2</h5>
+                    <p class="card-text text-muted small">DD/MM/YYYY</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a eleifend velit.... </p>
                     <a href="#" class="btn btn-primary mt-auto align-self-start">Baca Selengkapnya</a>
                 </div>
             </div>
@@ -40,11 +40,11 @@
 
         <div class="col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://via.placeholder.com/400x250?text=Berita+3" class="card-img-top" alt="Judul Berita 3">
+                <img src="https://via.placeholder.com/400x250?text=Berita+3" class="card-img-top" alt="Judul Berita 1">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Digitalisasi Koperasi: Anggota Kini Bisa Transaksi Online</h5>
-                    <p class="card-text text-muted small">20 Oktober 2025 | Kategori: Teknologi</p>
-                    <p class="card-text">Meluncurkan aplikasi mobile baru untuk mempermudah anggota dalam mengakses layanan dan produk...</p>
+                    <h5 class="card-title fw-bold">Judul Berita 3</h5>
+                    <p class="card-text text-muted small">DD/MM/YYYY</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a eleifend velit.... </p>
                     <a href="#" class="btn btn-primary mt-auto align-self-start">Baca Selengkapnya</a>
                 </div>
             </div>
@@ -52,11 +52,11 @@
 
         <div class="col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://via.placeholder.com/400x250?text=Berita+4" class="card-img-top" alt="Judul Berita 4">
+                <img src="https://via.placeholder.com/400x250?text=Berita+4" class="card-img-top" alt="Judul Berita 1">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Tips Mengelola Keuangan untuk Pelaku UKM</h5>
-                    <p class="card-text text-muted small">19 Oktober 2025 | Kategori: Tips</p>
-                    <p class="card-text">Simak 5 tips praktis dari ahli keuangan kami untuk membantu bisnis Anda tetap sehat dan berkembang...</p>
+                    <h5 class="card-title fw-bold">Judul Berita 4</h5>
+                    <p class="card-text text-muted small">DD/MM/YYYY</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a eleifend velit.... </p>
                     <a href="#" class="btn btn-primary mt-auto align-self-start">Baca Selengkapnya</a>
                 </div>
             </div>

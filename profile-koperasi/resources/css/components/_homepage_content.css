@@ -1,111 +1,141 @@
 /* resources/css/components/_homepage-content.css */
 
 /* === Custom Bootstrap Carousel Styles === */
-/* CATATAN: 
-   Style 'body' ini hanya berlaku untuk halaman
-   yang menggunakan konten ini (seperti Homepage).
+
+/* ===============================================
+    STYLE BARU DITAMBAHKAN DARI BLADE FILE
+===============================================
 */
-body {
-    padding-bottom: 3rem;
-    color: rgb(var(--bs-tertiary-color-rgb));
-  }
-  
-  .carousel {
-    margin-bottom: 4rem;
-  }
-  
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  .carousel-item {
-    height: 32rem;
-  }
-  
-  .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  
-  .featurette-divider {
-    margin: 5rem 0;
-  }
-  
-  .featurette-heading {
-    letter-spacing: -.05rem;
-  }
-  
-  @media (min-width: 40em) {
-    .carousel-caption p {
+.carousel-item {
+  height: 70vh; /* Mengatur tinggi carousel */
+  min-height: 400px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Memberi overlay gelap agar teks lebih mudah dibaca */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* Hapus SVG placeholder karena kita pakai background-image */
+.carousel-item svg {
+  display: none;
+}
+.marketing .bi {
+  font-size: 80px; /* Ukuran ikon di kolom marketing */
+  color: var(--bs-primary);
+}
+/* ===============================================
+ STYLE BAWAAN TEMPLATE (DENGAN PENYESUAIAN)
+===============================================
+*/
+
+/* BLOK "body { ... }" YANG BERMASALAH SUDAH DIHAPUS DARI SINI */
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+  /* position: relative; --> DIHAPUS KARENA MENYEBABKAN LAYOUT RUSAK */
+}
+
+/* Style .carousel-item { height: 32rem; } dihapus karena sudah diganti di atas */
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+@media (min-width: 40em) {
+  .carousel-caption p {
       margin-bottom: 1.25rem;
       font-size: 1.25rem;
       line-height: 1.4;
-    }
-  
-    .featurette-heading {
+  }
+
+  .featurette-heading {
       font-size: 50px;
-    }
   }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
       margin-top: 7rem;
-    }
   }
-  
-  /* Style placeholder bawaan Bootstrap */
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
+}
+
+/* Style placeholder bawaan Bootstrap */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
       font-size: 3.5rem;
-    }
   }
-  
-  /* Style helper bawaan Bootstrap */
-  .b-example-divider {
-    width: 100%;
-    height: 3rem;
-    background-color: #0000001a;
-    border: solid rgba(0, 0, 0, 0.15);
-    border-width: 1px 0;
-    box-shadow:
+}
+
+/* Style helper bawaan Bootstrap */
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: #0000001a;
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow:
       inset 0 0.5em 1.5em #0000001a,
       inset 0 0.125em 0.5em #00000026;
-  }
-  .b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
-  .bi {
-    vertical-align: -0.125em;
-    fill: currentColor;
-  }
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
+}
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
