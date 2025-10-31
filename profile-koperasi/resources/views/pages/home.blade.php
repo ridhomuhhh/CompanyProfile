@@ -1,4 +1,10 @@
 @extends('layouts.app')
+
+@push('styles')
+    {{-- CDN untuk Bootstrap Icons (dipakai di bagian Layanan) --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+@endpush
+
 @section('content')
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
         <div class="carousel-indicators">
