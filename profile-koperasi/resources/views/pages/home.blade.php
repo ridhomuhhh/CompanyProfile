@@ -51,14 +51,7 @@
           </p>
           <p><a class="btn btn-lg btn-primary" href="{{ url('/products') }}">Lihat Semua Layanan</a></p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+      </div>
     </div>
 
     
@@ -156,45 +149,6 @@
                 <li>Menjadi partner anggota dalam pengembangan usaha</li>
             </ul>
         </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading fw-normal lh-1">
-                    Oh yeah, it’s that good.
-                    <span class="text-body-secondary">See for yourself.</span>
-                </h2>
-                <p class="lead">
-                    Another featurette? Of course. More placeholder content here to
-                    give you an idea of how this layout would work with some actual
-                    real-world content in place.
-                </p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <svg aria-label="Placeholder: 500x500"
-                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                    preserveAspectRatio="xMidYMid slice" role="img" width="500"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
-                    <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-                        500x500
-                    </text>
-                </svg>
-            </div>
-        </div>
-        <hr class="featurette-divider" />
-        <div class="grid grid-rows-2 grid-cols-4 gap-5">
-            <div class="bg-green-300 row-span-2 p-10">
-                <h1>What We Do For Out Live</h1>
-                <p class="opacity-60 text-2xl mt-5">We work to bring smiles, hope, and a brighter future to
-                    those in need.
-                </p>
-            </div>
-            <div class="">
-                <i class="fa fa-phone-alt text-black fa-xl"></i>
-                <h3>What We Do For Out Live</h3>
-                <p class="text-2xl mt-5">Menjalankan manajemen yang profesional dan taat hukum
-                </p>
 
     </div>
 </section>
@@ -237,7 +191,7 @@
                         <div class="d-flex align-items-center">
                             <img src="https://placehold.co/60x60/EBF4FF/0d6efd?text=B" class="rounded-circle" alt="Anggota 2">
                             <div class="ms-3">
-                                <h6 class="fw-bold mb-0">M Ridho Habibie</h6>
+                                <h6 class="fw-bold mb-0">Ridho Habibie</h6>
                                 <span class="text-muted small">Anggota Sejak 2010</span>
                             </div>
                         </div>
@@ -335,7 +289,7 @@
             Jadilah bagian dari Koperasi TSM dan nikmati berbagai manfaat untuk kesejahteraan dan pengembangan usaha Anda.
         </p>
         {{-- Ganti '#' dengan link ke halaman pendaftaran Anda --}}
-        <a href="#" class="btn btn-light btn-lg fw-bold px-5 py-3">Segera Hubungi Admin Disini</a>
+        <a href="#" class="btn btn-light btn-lg fw-bold px-5 py-3">Lihat Cara Pendaftaran</a>
     </div>
 </section>
 <!-- Akhir Bagian CTA -->
