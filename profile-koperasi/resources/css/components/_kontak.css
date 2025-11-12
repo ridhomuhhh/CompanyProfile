@@ -1,12 +1,7 @@
-/* resources/css/components/_kontak.css */
-
-/* Styling untuk boks info kontak di sebelah kanan */
 .contact-info-box ul {
     padding-left: 0;
 }
-
-/* Mengatur jarak ikon dan teks */
 .contact-info-box li i {
-    flex-shrink: 0; /* Mencegah ikon menyusut */
-    width: 30px; /* Memberi lebar pasti untuk ikon */
+    flex-shrink: 0; 
+    width: 30px;
 }

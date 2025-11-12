@@ -10,57 +10,59 @@
     <div class="container">
         <div class="row">
 
+            <!-- Kolom 1 -->
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                 <h5 class="footer-title">Koperasi TSM</h5>
-                <p class="text-muted" style="color: #ced4da;">Koperasi Temprina Sejahtera Mandiri</p>
-                
-                <h5 class="footer-title mt-4">Jam Kerja</h5>
+                <p class="text-muted" style="color: #ced4da; font-size: 0.9rem;">
+                    Koperasi Temprina Sejahtera Mandiri
+                </p>
+
+                <h5 class="footer-title mt-3">Jam Kerja</h5>
                 <ul class="footer-links">
                     <li>Senin - Jumat: 08:00 - 16:00</li>
-                    <li>Sabtu: 08:00 - 14:00</li>
-                    <li>Minggu: Tutup</li>
+                    <li>Sabtu - Minggu: Tutup</li>
                 </ul>
             </div>
 
+            <!-- Kolom 2 (Sosial Media) -->
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
                 <h5 class="footer-title">Sosial Media</h5>
-                <div class="social-icons mb-4">
+                <div class="social-icons mb-3">
                     <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                     <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
                     <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                 </div>
-
-                <h5 class="footer-title mt-5">Navigasi</h5>
-                <ul class="footer-links">
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="{{ url('/about') }}">Tentang Kami</a></li>
-                    <li><a href="{{ url('/products') }}">Produk & Layanan</a></li>
-                    <li><a href="{{ url('/contact') }}">Kontak</a></li>
-                </ul>
             </div>
 
+            <!-- Kolom 3 -->
             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                 <h5 class="footer-title">Official Info</h5>
                 <div class="footer-info-item">
                     <i class="bi bi-geo-alt-fill"></i>
-                    <span>Jl. Temprina No. 123, Surabaya, Jawa Timur, 60123</span>
+                    <span>Jl. Karah Agung No.45, Karah, Kec. Jambangan, Surabaya</span>
                 </div>
                 <div class="footer-info-item">
                     <i class="bi bi-telephone-fill"></i>
-                    <span>(031) 123-4567</span>
+                    <span>(+62) 8123-4567</span>
                 </div>
-                <div classs="footer-info-item">
+                <div class="footer-info-item">
                     <i class="bi bi-envelope-fill"></i>
-                    <span>info@koperasitsm.com</span>
+                    <span>dummy@gmail.com</span>
                 </div>
             </div>
 
         </div>
 
-        <div class="row footer-divider">
-            <div class="col-12 footer-bottom-bar">
-                <p>&copy; {{ date('Y') }} © Koperasi Tunas Sejahtera Mandiri. All rights reserved.</p>
+        <!-- Bagian bawah footer -->
+        <div class="row footer-divider mt-4">
+            <div class="col-12 footer-bottom-bar d-flex justify-content-between align-items-center flex-wrap">
+                <p class="mb-0">&copy; {{ date('Y') }} Koperasi Tunas Sejahtera Mandiri. All rights reserved.</p>
+
+                <!-- Link Login -->
+                <a href="#" class="text-light text-decoration-none">
+                    <i class="bi bi-box-arrow-in-right"></i> Admin Login
+                </a>
             </div>
         </div>
 

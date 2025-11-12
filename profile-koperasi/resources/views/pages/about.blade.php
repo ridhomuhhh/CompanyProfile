@@ -7,9 +7,6 @@
 
 @section('content')
 
-<!-- ============================================= -->
-<!--          BAGIAN "TENTANG" (VISI & MISI)       -->
-<!-- ============================================= -->
 <section class="container my-5 py-5">
     <div class="row align-items-center g-5">
         
@@ -21,8 +18,6 @@
         
         <div class="col-lg-6">
             <h2 class="display-5 fw-bold">Tentang Koperasi TSM</h2>
-            
-            <!-- Mengganti Lorem Ipsum dengan Visi & Misi dari PPT -->
             <h3 class="h4 text-primary mt-4">Visi</h3>
             <p class="lead text-muted">
                 "Menjadi koperasi yang mandiri dan mensejahterakan anggota"
@@ -38,12 +33,7 @@
 
     </div>
 </section>
-<!-- Akhir Bagian "Tentang" -->
 
-
-<!-- ============================================= -->
-<!--          BAGIAN TIMELINE SEJARAH          -->
-<!-- ============================================= -->
 <section class="container-fluid bg-light my-5 py-5">
     <div class="container text-center">
         <h2 class="display-5 fw-bold mb-4">Sejarah Koperasi TSM</h2>
@@ -82,58 +72,106 @@
         </div>
     </div>
 </section>
-<!-- Akhir Bagian Timeline -->
-
-
-<!-- ============================================= -->
-<!--           BAGIAN STRUKTUR ORGANISASI          -->
-<!-- ============================================= -->
 <section class="container my-5 py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-10 text-center">
-            <h2 class="display-5 fw-bold mb-5">Struktur Organisasi</h2>
-            <p class="lead text-muted mb-4">
-                Koperasi Temprina Sejahtera Mandiri dikelola oleh tim yang profesional dan berdedikasi untuk melayani anggota.
-            </p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h2 class="display-5 fw-bold mb-3">Struktur Organisasi</h2>
+                <p class="lead text-muted mb-5">
+                    Koperasi Temprina Sejahtera Mandiri dikelola oleh tim yang profesional dan berdedikasi untuk melayani anggota.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bagian Pengurus Inti -->
+        <h3 class="fw-bold text-primary text-center mb-4">Pengurus Koperasi</h3>
+        <div class="row g-4 justify-content-center mb-5">
             
-            <div class="row g-4 justify-content-center text-start">
-                <!-- Pengurus Inti -->
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <h4 class="card-title text-primary">Pengurus Koperasi</h4>
-                            <ul class="list-unstyled lead mt-3">
-                                <li class="mb-2"><strong>Pembina:</strong> Libert</li>
-                                <li class="mb-2"><strong>Ketua:</strong> Turikan</li>
-                                <li class="mb-2"><strong>Sekretaris:</strong> Dissy</li>
-                                <li class="mb-2"><strong>Bendahara:</strong> Ayu</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pengawas -->
-                <div class="col-md-6">
-                     <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <h4 class="card-title text-primary">Pengawas</h4>
-                            <ul class="list-unstyled lead mt-3">
-                                <li class="mb-2">Riris</li>
-                                <li class="mb-2">Agus</li>
-                                <li class="mb-2">Edy</li>
-                            </ul>
-                        </div>
+            <!-- Card Ketua -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 text-center shadow-sm border-0 pt-4">
+                    <div class="card-body">
+                        <img src="https://placehold.co/100x100/EBF4FF/0d6efd?text=Foto" class="rounded-circle mb-3" alt="Foto Ketua">
+                        <h5 class="card-title fw-bold">Turikan</h5>
+                        <p class="card-text text-muted">Ketua</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Card Sekretaris -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 text-center shadow-sm border-0 pt-4">
+                    <div class="card-body">
+                        <img src="https://placehold.co/100x100/EBF4FF/0d6efd?text=Foto" class="rounded-circle mb-3" alt="Foto Sekretaris">
+                        <h5 class="card-title fw-bold">Dissy</h5>
+                        <p class="card-text text-muted">Sekretaris</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Bendahara -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 text-center shadow-sm border-0 pt-4">
+                    <div class="card-body">
+                        <img src="https://placehold.co/100x100/EBF4FF/0d6efd?text=Foto" class="rounded-circle mb-3" alt="Foto Bendahara">
+                        <h5 class="card-title fw-bold">Ayu</h5>
+                        <p class="card-text text-muted">Bendahara</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Pembina -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 text-center shadow-sm border-0 pt-4">
+                    <div class="card-body">
+                        <img src="https://placehold.co/100x100/EBF4FF/0d6efd?text=Foto" class="rounded-circle mb-3" alt="Foto Pembina">
+                        <h5 class="card-title fw-bold">Libert</h5>
+                        <p class="card-text text-muted">Pembina</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h3 class="fw-bold text-primary text-center mb-4">Pengawas</h3>
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Card Pengawas 1 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 text-center shadow-sm border-0 pt-4">
+                    <div class="card-body">
+                        <img src="https://placehold.co/100x100/EBF4FF/0d6efd?text=Foto" class="rounded-circle mb-3" alt="Foto Pengawas Riris">
+                        <h5 class="card-title fw-bold">Riris</h5>
+                        <p class="card-text text-muted">Pengawas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Pengawas 2 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 text-center shadow-sm border-0 pt-4">
+                    <div class="card-body">
+                        <img src="https://placehold.co/100x100/EBF4FF/0d6efd?text=Foto" class="rounded-circle mb-3" alt="Foto Pengawas Agus">
+                        <h5 class="card-title fw-bold">Agus</h5>
+                        <p class="card-text text-muted">Pengawas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Pengawas 3 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 text-center shadow-sm border-0 pt-4">
+                    <div class="card-body">
+                        <img src="https://placehold.co/100x100/EBF4FF/0d6efd?text=Foto" class="rounded-circle mb-3" alt="Foto Pengawas Edy">
+                        <h5 class="card-title fw-bold">Edy</h5>
+                        <p class="card-text text-muted">Pengawas</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
-<!-- Akhir Bagian Struktur Organisasi -->
-
-
-<!-- ============================================= -->
-<!--           BAGIAN PRINSIP & TUJUAN             -->
-<!-- ============================================= -->
 <section class="container-fluid bg-light my-5 py-5">
     <div class="container">
         <div class="row g-5">
@@ -165,7 +203,5 @@
         </div>
     </div>
 </section>
-<!-- Akhir Bagian Prinsip & Tujuan -->
-
 @endsection
 
