@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; 
 
+
 // Rute ini sudah benar
 Route::get('/', function () {
     return view('pages.home');
 });
-
 // --- PERBAIKAN DI BAWAH INI ---
 Route::get('/tentang-kami', function () {
     return view('pages.about'); 
