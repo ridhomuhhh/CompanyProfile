@@ -17,10 +17,12 @@ class Galeri extends Model
         'media',
         'tanggal',
         'user_id',
+        'is_active',
     ];
 
     protected $casts = [
         'tanggal' => 'datetime',
+        'is_active' => 'boolean',
     ];
 
     public function user(): BelongsTo

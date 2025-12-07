@@ -8,4 +8,8 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateTentangKami extends CreateRecord
 {
     protected static string $resource = TentangKamiResource::class;
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

@@ -46,11 +46,6 @@ class KontakResource extends Resource
         ];
     }
 
-    public static function canCreate(): bool
-    {
-        return static::getModel()::count() < 1;
-    }
-
     public static function getPages(): array
     {
         return [

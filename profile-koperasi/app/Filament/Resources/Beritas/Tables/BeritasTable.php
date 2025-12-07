@@ -2,11 +2,13 @@
 
 namespace App\Filament\Resources\Beritas\Tables;
 
+use Filament\Tables\Table;
+use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\ToggleColumn;
 
 class BeritasTable
 {
@@ -16,15 +18,16 @@ class BeritasTable
             ->columns([
                 TextColumn::make('judul_berita')
                     ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('gambar')
-                    ->searchable(),
+                ImageColumn::make('gambar')
+                    ->disk('public')
+                    ->label('Gambar')
+                    ->imageHeight('100px')
+                    ->width('auto'),
                 TextColumn::make('tanggal')
                     ->dateTime()
                     ->sortable(),
-                TextColumn::make('user.id_admin')
-                    ->numeric()
+                ToggleColumn::make('is_active')
+                    ->label('Terbitkan')
                     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()

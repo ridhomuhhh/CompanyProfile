@@ -10,16 +10,18 @@ return new class extends Migration
     {
         Schema::create('media_sosial', function (Blueprint $table) {
             $table->id();
-            $table->string('link_instagram', 255)->nullable();
-            $table->string('link_x', 255)->nullable();
-            $table->string('link_facebook', 255)->nullable();
-            $table->string('link_tiktok', 255)->nullable();
-
             $table->foreignId('user_id')
                 ->nullable()
                 ->cascadeOnUpdate()
                 ->constrained('users')
                 ->nullOnDelete();
+
+            $table->boolean('is_active')->default(true);
+            $table->string('link_instagram', 255)->nullable();
+            $table->string('link_x', 255)->nullable();
+            $table->string('link_facebook', 255)->nullable();
+            $table->string('link_tiktok', 255)->nullable();
+
 
             $table->timestamps();
         });

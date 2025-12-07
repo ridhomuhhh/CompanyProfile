@@ -31,6 +31,10 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
+            ->brandName('Koperasi TSM Admin') // Ganti teks judul
+            ->brandLogo(asset('images/logo-tsm.png')) // Ganti logo (simpan gambar di public/images)
+            ->brandLogoHeight('3rem') // Ukuran logo
+            ->favicon(asset('images/logo-tsm.png'))
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
@@ -62,6 +66,7 @@ class AdminPanelProvider extends PanelProvider
                 'Lainnya'
             ])
 
-            ->collapsibleNavigationGroups(false);
+            ->collapsibleNavigationGroups(false)
+            ->sidebarFullyCollapsibleOnDesktop();
     }
 }

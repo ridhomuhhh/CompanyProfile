@@ -8,4 +8,9 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateBerita extends CreateRecord
 {
     protected static string $resource = BeritaResource::class;
+
+    public function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index');
+    }
 }

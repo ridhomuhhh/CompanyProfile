@@ -18,8 +18,23 @@ class Kontak extends Model
         'email',
         'maps',
         'jam_operasional',
+        'is_active',
     ];
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+    protected static function boot()
+    {
+        parent::boot();
 
+        static::saving(function ($model) {
+            // Cek: Apakah data ini sedang diset menjadi AKTIF (true)?
+            if ($model->is_active) {
+                // Jika YA, maka matikan (false) semua data lain selain yang ini
+                static::where('id', '!=', $model->id)->update(['is_active' => false]);
+            }
+        });
+    }
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

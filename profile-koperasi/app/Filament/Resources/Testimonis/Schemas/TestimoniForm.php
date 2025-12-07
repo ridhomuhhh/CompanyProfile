@@ -2,10 +2,12 @@
 
 namespace App\Filament\Resources\Testimonis\Schemas;
 
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 
 class TestimoniForm
 {
@@ -13,13 +15,25 @@ class TestimoniForm
     {
         return $schema
             ->components([
-                TextInput::make('nama'),
-                TextInput::make('pekerjaan'),
+                TextInput::make('nama')
+                    ->required(),
+                TextInput::make('pekerjaan')
+                    ->label('Posisi/Jabatan')
+                    ->required(),
                 Textarea::make('isi')
+                    ->required()
+                    ->label('Testimoni')
                     ->columnSpanFull(),
-                TextInput::make('foto'),
-                Select::make('user_id')
-                    ->relationship('user', 'name'),
+                FileUpload::make('foto')
+                    ->image()
+                    ->required()
+                    ->disk('public'),
+                Toggle::make('is_active')
+                    ->label('Tampilkan Testimoni?')
+                    ->onColor('success')
+                    ->offColor('danger')
+                    ->default(true),
+
             ]);
     }
 }

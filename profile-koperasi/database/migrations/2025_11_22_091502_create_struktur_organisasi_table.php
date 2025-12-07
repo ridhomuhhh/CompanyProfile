@@ -10,16 +10,18 @@ return new class extends Migration
     {
         Schema::create('struktur_organisasi', function (Blueprint $table) {
             $table->id();
-            $table->string('deskripsi', 255)->nullable();
-            $table->string('nama_anggota', 255)->nullable();
-            $table->string('jabatan', 100)->nullable();
-            $table->string('foto', 255)->nullable();
-
             $table->foreignId('user_id')
                 ->nullable()
                 ->constrained('users')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+
+            $table->boolean('is_active')->default(true);
+            $table->string('deskripsi', 255)->nullable();
+            $table->string('nama_anggota', 255)->nullable();
+            $table->string('jabatan', 100)->nullable();
+            $table->string('foto', 255)->nullable();
+
 
             $table->timestamps();
         });

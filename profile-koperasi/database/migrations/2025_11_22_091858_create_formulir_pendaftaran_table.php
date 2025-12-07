@@ -10,15 +10,17 @@ return new class extends Migration
     {
         Schema::create('formulir_pendaftaran', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_formulir', 100)->nullable();
-            $table->text('link_formulir')->nullable();
-            $table->dateTime('tanggal')->nullable();
-
             $table->foreignId('user_id')
                 ->nullable()
                 ->constrained('users')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+
+            $table->boolean('is_active')->default(true);
+            $table->string('nama_formulir', 100)->nullable();
+            $table->text('link_formulir')->nullable();
+            $table->dateTime('tanggal')->nullable();
+
 
             $table->timestamps();
         });

@@ -15,9 +15,6 @@ class ListKontaks extends ListRecords
     {
         return [
             CreateAction::make()
-                // Tambahkan logika ini:
-                // Tombol akan hidden (sembunyi) jika jumlah data > 0
-                ->hidden(fn (): bool => Kontak::count() >= 1),
         ];
     }
 }

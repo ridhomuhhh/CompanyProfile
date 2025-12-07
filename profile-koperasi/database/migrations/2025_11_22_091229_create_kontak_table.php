@@ -17,6 +17,7 @@ return new class extends Migration
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
 
+            $table->boolean('is_active')->default(true);
             $table->text('alamat')->nullable();
             $table->string('telepon', 20)->nullable();
             $table->string('email', 100)->nullable();
