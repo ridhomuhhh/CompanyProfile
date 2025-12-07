@@ -58,11 +58,6 @@
     <div class="row footer-divider mt-4">
       <div class="col-12 footer-bottom-bar d-flex justify-content-between align-items-center flex-wrap">
         <p class="mb-0">&copy; {{ date('Y') }} Koperasi Tunas Sejahtera Mandiri. All rights reserved.</p>
-
-        <!-- Link Login -->
-        <a href="/admin/login" class="text-light text-decoration-none">
-          <i class="bi bi-box-arrow-in-right"></i> Admin Login
-        </a>
       </div>
     </div>
 

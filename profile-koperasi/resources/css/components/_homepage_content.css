@@ -1,5 +1,14 @@
+/* resources/css/components/_homepage-content.css */
+
+/* ===============================================
+   1. STYLE UNTUK CAROUSEL / SLIDER
+=============================================== */
+.carousel {
+  margin-bottom: 4rem;
+}
+
 .carousel-item {
-  height: 70vh; 
+  height: 70vh; /* Tinggi carousel */
   min-height: 400px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -7,112 +16,109 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+/* Overlay gelap agar teks lebih terbaca */
 .carousel-item::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-}
-.carousel-item svg {
-  display: none;
-}
-.marketing .bi {
-  font-size: 80px; 
-  color: var(--bs-primary);
-}
-
-
-.carousel {
-  margin-bottom: 4rem;
 }
 
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
+
+/* Sembunyikan SVG placeholder jika ada */
+.carousel-item svg {
+  display: none;
+}
+
+/* ===============================================
+   2. STYLE UNTUK LAYANAN (MARKETING)
+=============================================== */
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+.marketing .bi {
+  font-size: 80px;
+  color: var(--bs-primary);
 }
 
 .featurette-divider {
   margin: 5rem 0;
 }
 
-.featurette-heading {
-  letter-spacing: -.05rem;
+/* ===============================================
+   3. STYLE KHUSUS UNTUK GALERI MOZAIK
+=============================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 kolom */
+    gap: 15px;
+    padding: 15px;
 }
 
-@media (min-width: 40em) {
-  .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
-  }
-
-  .featurette-heading {
-      font-size: 50px;
-  }
-}
-
-@media (min-width: 62em) {
-  .featurette-heading {
-      margin-top: 7rem;
-  }
-}
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
+/* Desktop: Grid 4 kolom dengan tinggi baris tetap */
 @media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-  }
-}
-.b-example-divider {
-  width: 100%;
-  height: 3rem;
-  background-color: #0000001a;
-  border: solid rgba(0, 0, 0, 0.15);
-  border-width: 1px 0;
-  box-shadow:
-      inset 0 0.5em 1.5em #0000001a,
-      inset 0 0.125em 0.5em #00000026;
-}
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-}
-.bi {
-  vertical-align: -0.125em;
-  fill: currentColor;
-}
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
-}
-.nav-scroller .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 280px); /* Tinggi baris */
+        height: 580px; /* Total tinggi */
+    }
+    
+    /* Item Utama (Besar) - Mengambil 2x2 kotak */
+    .gallery-item-main {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    
+    /* Item Lebar - Mengambil 2 kolom ke samping */
+    .gallery-item-wide {
+        grid-column: span 2;
+    }
 }
 
+/* Styling Kartu Galeri */
+.gallery-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+/* Gambar */
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Efek Zoom saat Hover */
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Teks (Muncul saat Hover) */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}

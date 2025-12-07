@@ -18,7 +18,7 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" 
                        href="{{ url('/') }}">
-                        Home
+                        Beranda
                     </a>
                 </li>
                 <li class="nav-item">
@@ -47,7 +47,6 @@
                 </li>
             </ul>
 
-            {{-- Tombol "PESAN SEKARANG" di sebelah kanan --}}
             <a class="btn btn-primary d-none d-lg-flex" href="{{ url('/contact') }}" role="button">
                 GABUNG SEKARANG &rarr;
             </a>
