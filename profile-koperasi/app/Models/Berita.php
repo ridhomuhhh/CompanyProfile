@@ -19,7 +19,8 @@ class Berita extends Model
         'isi_berita',
         'gambar',
         'tanggal',
-        'user_id',
+        'users_id',
+        'is_active',
     ];
 
     /**
@@ -27,6 +28,7 @@ class Berita extends Model
      */
     protected $casts = [
         'tanggal' => 'datetime',
+        'is_active' => 'boolean',
     ];
     public function user(): BelongsTo
     {

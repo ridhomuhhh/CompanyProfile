@@ -2,11 +2,13 @@
 
 namespace App\Filament\Resources\Galeris\Tables;
 
+use Filament\Tables\Table;
+use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\ToggleColumn;
 
 class GalerisTable
 {
@@ -16,13 +18,16 @@ class GalerisTable
             ->columns([
                 TextColumn::make('judul')
                     ->searchable(),
-                TextColumn::make('media')
-                    ->searchable(),
+                ImageColumn::make('media')
+                    ->disk('public')
+                    ->label('Gambar')
+                    ->imageHeight('100px')
+                    ->width('auto'),
                 TextColumn::make('tanggal')
                     ->dateTime()
                     ->sortable(),
-                TextColumn::make('user.name')
-                    ->numeric()
+                ToggleColumn::make('is_active')
+                    ->label('Tampilkan Gambar')
                     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()

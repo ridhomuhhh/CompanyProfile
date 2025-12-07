@@ -8,4 +8,8 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateGaleri extends CreateRecord
 {
     protected static string $resource = GaleriResource::class;
+    public function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index');
+    }
 }

@@ -16,9 +16,10 @@ return new class extends Migration
                 ->constrained('users')
                 ->nullOnDelete();
 
+            $table->boolean('is_active')->default(true);
             $table->longText('sejarah')->nullable();
             $table->mediumText('visi')->nullable();
-            $table->mediumText('misi')->nullable();
+            $table->longText('misi')->nullable();
             $table->mediumText('legalitas_hukum')->nullable();
 
             $table->timestamps();

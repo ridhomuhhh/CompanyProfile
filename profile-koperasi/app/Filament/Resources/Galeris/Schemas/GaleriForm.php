@@ -3,8 +3,10 @@
 namespace App\Filament\Resources\Galeris\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class GaleriForm
@@ -13,11 +15,16 @@ class GaleriForm
     {
         return $schema
             ->components([
-                TextInput::make('judul'),
-                TextInput::make('media'),
+                TextInput::make('judul') //bisa diganti deskripsi gambar?
+                    ->required(),
                 DateTimePicker::make('tanggal'),
-                Select::make('user_id')
-                    ->relationship('user', 'name'),
+                FileUpload::make('media')
+                    ->label('Gambar')
+                    ->image()
+                    ->required()
+                    ->disk('public'),
+                Toggle::make('is_active')
+                    ->label('Tampilkan Gambar'),
             ]);
     }
 }

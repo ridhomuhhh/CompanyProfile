@@ -19,12 +19,8 @@ class Testimoni extends Model
         'isi',
         'foto',
         'user_id',
+        'is_active',
     ];
-
-    /**
-     * Relasi: Testimoni ini dibuat/diinput oleh User siapa?
-     * (Sisi "Child" -> BelongsTo)
-     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

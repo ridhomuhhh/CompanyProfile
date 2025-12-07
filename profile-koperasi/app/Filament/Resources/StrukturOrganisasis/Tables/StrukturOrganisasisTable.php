@@ -2,11 +2,13 @@
 
 namespace App\Filament\Resources\StrukturOrganisasis\Tables;
 
+use Filament\Tables\Table;
+use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\ToggleColumn;
 
 class StrukturOrganisasisTable
 {
@@ -20,10 +22,13 @@ class StrukturOrganisasisTable
                     ->searchable(),
                 TextColumn::make('jabatan')
                     ->searchable(),
-                TextColumn::make('foto')
-                    ->searchable(),
-                TextColumn::make('user.name')
-                    ->numeric()
+                ImageColumn::make('foto')
+                    ->disk('public')
+                    ->label('Foto Anggota')
+                    ->imageHeight('100px')
+                    ->width('auto'),
+                ToggleColumn::make('is_active')
+                    ->label('Tampilkan Anggota')
                     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
@@ -41,9 +46,9 @@ class StrukturOrganisasisTable
                 EditAction::make(),
             ])
             ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
+                // BulkActionGroup::make([
+                //     DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 }

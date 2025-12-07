@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController; 
+use App\Http\Controllers\HomeController;
 
 
 // Rute ini sudah benar
@@ -10,8 +11,8 @@ Route::get('/', function () {
 });
 // --- PERBAIKAN DI BAWAH INI ---
 Route::get('/tentang-kami', function () {
-    return view('pages.about'); 
-})->name('tentang-kami'); 
+    return view('pages.about');
+})->name('tentang-kami');
 
 Route::get('/berita', function () {
     return view('pages.berita');

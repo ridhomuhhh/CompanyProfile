@@ -2,9 +2,12 @@
 
 namespace App\Filament\Resources\TentangKamis\Schemas;
 
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 
 class TentangKamiForm
 {
@@ -12,16 +15,31 @@ class TentangKamiForm
     {
         return $schema
             ->components([
-                Select::make('user_id')
-                    ->relationship('user', 'id_admin'),
                 Textarea::make('sejarah')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Sejarah Singkat')
+                    ->required(),
                 Textarea::make('visi')
-                    ->columnSpanFull(),
-                Textarea::make('misi')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Visi Perusahaan')
+                    ->required(),
+                Repeater::make('misi')
+                    ->label('Daftar Misi')
+                    ->simple(
+                        TextInput::make('poin_misi')
+                            ->required(),
+                    )
+                    ->addActionLabel('+ Tambah') // Label tombol tambah
+                    ->reorderableWithButtons()
+                    ->required(),
                 Textarea::make('legalitas_hukum')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->required(),
+                Toggle::make('is_active')
+                    ->label('Tampilkan?')
+                    ->onColor('success')
+                    ->offColor('danger')
+                    ->default(true),
             ]);
     }
 }

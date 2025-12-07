@@ -21,8 +21,11 @@ class StrukturOrganisasi extends Model
         'jabatan',
         'foto',
         'user_id',
+        'is_active',
     ];
-
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
     /**
      * Relasi ke User (Admin)
      */

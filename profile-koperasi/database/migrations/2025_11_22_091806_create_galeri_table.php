@@ -10,15 +10,17 @@ return new class extends Migration
     {
         Schema::create('galeri', function (Blueprint $table) {
             $table->id();
-            $table->string('judul', 100)->nullable();
-            $table->string('media', 255)->nullable();
-            $table->dateTime('tanggal')->nullable();
-
             $table->foreignId('user_id')
                 ->nullable()
                 ->constrained('users')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+
+            $table->boolean('is_active')->default(true);
+            $table->string('judul', 100)->nullable();
+            $table->string('media', 255)->nullable();
+            $table->dateTime('tanggal')->nullable();
+
 
             $table->timestamps();
         });

@@ -6,6 +6,7 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 
 class MediaSosialsTable
@@ -22,8 +23,8 @@ class MediaSosialsTable
                     ->searchable(),
                 TextColumn::make('link_tiktok')
                     ->searchable(),
-                TextColumn::make('user.name')
-                    ->numeric()
+                ToggleColumn::make('is_active')
+                    ->label('Tampilkan Media Sosial')
                     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
