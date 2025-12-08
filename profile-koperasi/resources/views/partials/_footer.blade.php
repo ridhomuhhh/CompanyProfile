@@ -28,9 +28,9 @@
       <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
         <h5 class="footer-title">Sosial Media</h5>
         <div class="social-icons mb-3">
-          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href={{ $sosmed?->link_facebook }} aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href={{ $sosmed?->link_instagram }} aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href={{ $sosmed?->link_tiktok }} aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
           <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
@@ -40,15 +40,15 @@
         <h5 class="footer-title">Official Info</h5>
         <div class="footer-info-item">
           <i class="bi bi-geo-alt-fill"></i>
-          <span>Jl. Karah Agung No.45, Karah, Kec. Jambangan, Surabaya</span>
+          <span>{{ $kontaks?->alamat }}</span>
         </div>
         <div class="footer-info-item">
           <i class="bi bi-telephone-fill"></i>
-          <span>(+62) 8123-4567</span>
+          <span>{{ $kontaks?->telepon }}</span>
         </div>
         <div class="footer-info-item">
           <i class="bi bi-envelope-fill"></i>
-          <span>dummy@gmail.com</span>
+          <span>{{ $kontaks?->email }}</span>
         </div>
       </div>
 

@@ -3,13 +3,12 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BerandaController;
 
 
-// Rute ini sudah benar
-Route::get('/', function () {
-    return view('pages.home');
-});
-// --- PERBAIKAN DI BAWAH INI ---
+// Route diarahkan ke BerandaController
+Route::get('/', [BerandaController::class, 'index'])->name('beranda');
+
 Route::get('/tentang-kami', function () {
     return view('pages.about');
 })->name('tentang-kami');
