@@ -193,54 +193,65 @@
 
 
   <!-- ============================================= -->
-  <!--        (BARU) BAGIAN BERITA TERBARU           -->
-  <!-- ============================================= -->
-  <section class="container my-5 py-5">
+<!--        (BARU) BAGIAN BERITA TERBARU           -->
+<!-- ============================================= -->
+<section class="container my-5 py-5">
     <div class="container">
-      <h2 class="display-5 fw-bold text-center mb-5">Berita & Kegiatan Terbaru</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://placehold.co/600x400/ced4da/white?text=RAT+2024" class="card-img-top" alt="RAT 2024">
-            <div class="card-body p-4">
-              <h5 class="card-title fw-bold">Koperasi TSM Sukses Menyelenggarakan RAT Tahun 2024</h5>
-              <p class="card-text text-muted small">27 Maret 2025</p>
-              <p class="card-text">Sebagai bentuk transparansi, Koperasi TSM telah menggelar Rapat Anggota Tahunan di
-                Surabaya...</p>
-              <a href="#" class="btn btn-outline-primary stretched-link">Baca Selengkapnya</a>
+        <h2 class="display-5 fw-bold text-center mb-5">Berita & Kegiatan Terbaru</h2>
+        <div class="row g-4">
+            
+            <!-- Berita 1: RAT -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/600x400/ced4da/white?text=RAT+2024" class="card-img-top" alt="RAT 2024">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Koperasi TSM Sukses Menyelenggarakan RAT Tahun 2024</h5>
+                        <p class="card-text text-muted small">27 Maret 2025</p>
+                        <p class="card-text">Sebagai bentuk transparansi, Koperasi TSM telah menggelar Rapat Anggota Tahunan di Surabaya...</p>
+                        
+                        {{-- PERBAIKAN: Link diarahkan ke slug 'rat-2024' --}}
+                        <a href="{{ url('/berita/rat-2024') }}" class="btn btn-outline-primary stretched-link">Baca Selengkapnya</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://placehold.co/600x400/ced4da/white?text=Kantor+Baru" class="card-img-top"
-              alt="Kantor Baru">
-            <div class="card-body p-4">
-              <h5 class="card-title fw-bold">Koperasi TSM Resmi Menempati Kantor Baru</h5>
-              <p class="card-text text-muted small">Tahun 2020</p>
-              <p class="card-text">Untuk meningkatkan pelayanan, kami pindah ke kantor baru yang lebih representatif dan
-                nyaman bagi anggota...</p>
-              <a href="#" class="btn btn-outline-primary stretched-link">Baca Selengkapnya</a>
+
+            <!-- Berita 2: Kantor Baru -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/600x400/ced4da/white?text=Kantor+Baru" class="card-img-top" alt="Kantor Baru">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Koperasi TSM Resmi Menempati Kantor Baru</h5>
+                        <p class="card-text text-muted small">Tahun 2020</p>
+                        <p class="card-text">Untuk meningkatkan pelayanan, kami pindah ke kantor baru yang lebih representatif dan nyaman bagi anggota...</p>
+                        
+                        {{-- PERBAIKAN: Link diarahkan ke slug 'kantor-baru' --}}
+                        <a href="{{ url('/berita/kantor-baru') }}" class="btn btn-outline-primary stretched-link">Baca Selengkapnya</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://placehold.co/600x400/ced4da/white?text=Pendidikan" class="card-img-top"
-              alt="Pendidikan Anggota">
-            <div class="card-body p-4">
-              <h5 class="card-title fw-bold">Program Pendidikan Perkoperasian untuk Anggota</h5>
-              <p class="card-text text-muted small">Berkelanjutan</p>
-              <p class="card-text">Sesuai prinsip koperasi, kami rutin melaksanakan pendidikan untuk meningkatkan
-                kemampuan anggota...</p>
-              <a href="#" class="btn btn-outline-primary stretched-link">{{ $kontaks?->email }}</a>
+
+            <!-- Berita 3: Pendidikan -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://placehold.co/600x400/ced4da/white?text=Pendidikan" class="card-img-top" alt="Pendidikan Anggota">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Program Pendidikan Perkoperasian untuk Anggota</h5>
+                        <p class="card-text text-muted small">Berkelanjutan</p>
+                        <p class="card-text">Sesuai prinsip koperasi, kami rutin melaksanakan pendidikan untuk meningkatkan kemampuan anggota...</p>
+                        
+                        {{-- PERBAIKAN: 
+                             1. Teks tombol diperbaiki menjadi "Baca Selengkapnya" (bukan email)
+                             2. Link diarahkan ke slug 'pendidikan-anggota' 
+                        --}}
+                        <a href="{{ url('/berita/pendidikan-anggota') }}" class="btn btn-outline-primary stretched-link">Baca Selengkapnya</a>
+                    </div>
+                </div>
             </div>
-          </div>
+
         </div>
-      </div>
-      <div class="text-center mt-5">
-        <a href="{{ url('/berita') }}" class="btn btn-primary btn-lg">Lihat Semua Berita</a>
-      </div>
+        <div class="text-center mt-5">
+            <a href="{{ url('/berita') }}" class="btn btn-primary btn-lg">Lihat Semua Berita</a>
+        </div>
     </div>
-  </section>
+</section>
 @endsection

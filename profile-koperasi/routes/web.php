@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\NewsController;
 
 
 // Route diarahkan ke BerandaController
@@ -13,9 +14,11 @@ Route::get('/tentang-kami', function () {
     return view('pages.about');
 })->name('tentang-kami');
 
-Route::get('/berita', function () {
-    return view('pages.berita');
-})->name('berita');
+// Route Halaman List Berita
+Route::get('/berita', [NewsController::class, 'index'])->name('news.index');
+
+// Route Halaman Baca Berita (Menggunakan {slug} agar dinamis)
+Route::get('/berita/{slug}', [NewsController::class, 'show'])->name('news.show');
 
 Route::get('/kontak', function () {
     return view('pages.kontak');
