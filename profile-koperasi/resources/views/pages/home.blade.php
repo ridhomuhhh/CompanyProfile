@@ -135,58 +135,28 @@
   <section class="container-fluid bg-light my-5 py-5">
     <div class="container">
       <h2 class="display-5 fw-bold text-center mb-5">Apa Kata Anggota Kami?</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body p-4">
-              <i class="bi bi-quote fs-1 text-primary"></i>
-              <p class="lead text-muted mt-3 fst-italic">"Bergabung dengan Koperasi TSM adalah keputusan terbaik.
-                Pelayanannya profesional dan sangat membantu usaha saya."</p>
-              <hr>
-              <div class="d-flex align-items-center">
-                <img src="https://placehold.co/60x60/EBF4FF/0d6efd?text=A" class="rounded-circle" alt="Anggota 1">
-                <div class="ms-3">
-                  <h6 class="fw-bold mb-0">Anggota A</h6>
-                  <span class="text-muted small">Pemilik Usaha</span>
+      <div class="row g-4 flex justify-content-center">
+        @foreach ($testimonis as $item)
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body p-4">
+                <i class="bi bi-quote fs-1 text-primary"></i>
+                <p class="lead text-muted mt-3 fst-italic">{{ $item->isi }}</p>
+                <hr>
+                <div class="flex align-items-center">
+                  <div class="ratio ratio-1x1">
+                    <img src="{{ asset('storage/' . $item->foto) }}" class="object-fit-cover" alt="Anggota 1"
+                      width="100">
+                  </div>
+                  <div class="ms-3">
+                    <h6 class="fw-bold mb-0">{{ $item->nama }}</h6>
+                    <span class="text-muted small">{{ $item->pekerjaan }}</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body p-4">
-              <i class="bi bi-quote fs-1 text-primary"></i>
-              <p class="lead text-muted mt-3 fst-italic">"Simpanan di TSM aman dan jelas perhitungannya. Saya merasa
-                tenang menabung di sini untuk masa depan."</p>
-              <hr>
-              <div class="d-flex align-items-center">
-                <img src="https://placehold.co/60x60/EBF4FF/0d6efd?text=B" class="rounded-circle" alt="Anggota 2">
-                <div class="ms-3">
-                  <h6 class="fw-bold mb-0">Anggota B</h6>
-                  <span class="text-muted small">Anggota Sejak 2010</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body p-4">
-              <i class="bi bi-quote fs-1 text-primary"></i>
-              <p class="lead text-muted mt-3 fst-italic">"Proses pinjaman modalnya cepat dan tidak berbelit-belit. Sangat
-                membantu saat usaha saya butuh dana cepat."</p>
-              <hr>
-              <div class="d-flex align-items-center">
-                <img src="https://placehold.co/60x60/EBF4FF/0d6efd?text=C" class="rounded-circle" alt="Anggota 3">
-                <div class="ms-3">
-                  <h6 class="fw-bold mb-0">Anggota C</h6>
-                  <span class="text-muted small">Anggota UKM</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section>
