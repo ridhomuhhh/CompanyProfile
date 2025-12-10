@@ -46,8 +46,8 @@
                     </a>
                 </li>
             </ul>
-
-            <a class="btn btn-primary d-none d-lg-flex" href="{{ url('/contact') }}" role="button">
+                
+            <a class="btn btn-primary d-none d-lg-flex" href="{{ url('/kontak') }}" role="button"> 
                 GABUNG SEKARANG &rarr;
             </a>
 
