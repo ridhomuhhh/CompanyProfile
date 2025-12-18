@@ -38,6 +38,8 @@ class GalerisTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->reorderable('sort_order')
+            ->defaultSort('sort_order', 'asc')
             ->filters([
                 //
             ])

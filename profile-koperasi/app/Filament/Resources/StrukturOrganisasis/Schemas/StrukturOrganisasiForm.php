@@ -23,11 +23,20 @@ class StrukturOrganisasiForm
                     ->required()
                     ->label('Jabatan Anggota')
                     ->maxLength(100),
+                Select::make('role')
+                    ->label('Peran Anggota')
+                    ->options([
+                        'pengurus' => 'Pengurus',
+                        'pengawas' => 'Pengawas',
+                    ])
+                    ->searchable()
+                    ->native(false)
+                    ->required(),
                 Textarea::make('deskripsi')
                     ->required()
                     ->columnSpanFull()
                     ->label('Deskripsi Singkat Anggota'),
-                FileUpload::make('foto_anggota')
+                FileUpload::make('foto')
                     ->image()
                     ->disk('public'),
                 Toggle::make('is_active')

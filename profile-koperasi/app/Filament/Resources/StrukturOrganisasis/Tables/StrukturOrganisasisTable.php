@@ -4,6 +4,8 @@ namespace App\Filament\Resources\StrukturOrganisasis\Tables;
 
 use Filament\Tables\Table;
 use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\TextColumn;
@@ -16,15 +18,16 @@ class StrukturOrganisasisTable
     {
         return $table
             ->columns([
-                TextColumn::make('deskripsi')
-                    ->searchable(),
                 TextColumn::make('nama_anggota')
                     ->searchable(),
                 TextColumn::make('jabatan')
                     ->searchable(),
+                TextColumn::make('role')
+                    ->searchable(),
                 ImageColumn::make('foto')
                     ->disk('public')
                     ->label('Foto Anggota')
+                    ->circular()
                     ->imageHeight('100px')
                     ->width('auto'),
                 ToggleColumn::make('is_active')
@@ -44,6 +47,8 @@ class StrukturOrganisasisTable
             ])
             ->recordActions([
                 EditAction::make(),
+                ViewAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 // BulkActionGroup::make([
