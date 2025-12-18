@@ -82,47 +82,57 @@
 
     <div class="gallery-grid">
 
-      <!-- Gambar 1 (UTAMA - BESAR) -->
-      <div class="gallery-item-main">
-        <div class="gallery-card">
-          <img src="https://placehold.co/800x800/003366/FFF?text=RAT+Tahun+2024" alt="RAT 2024">
-          <div class="gallery-overlay">
-            <h5 class="fw-bold">Rapat Anggota Tahunan 2024</h5>
-            <p class="small mb-0">Surabaya, 27 Maret 2025</p>
-          </div>
-        </div>
-      </div>
+      @if (isset($galeri[0]))
+        <div class="gallery-item-main">
+          <div class="gallery-card">
+            <img src="{{ asset('storage/' . $galeri[0]->media) }}" alt="{{ $galeri[0]->judul ?? 'Galeri Utama' }}"
+              style="width: 100%; height: 100%; object-fit: cover;">
 
-      <!-- Gambar 2 (Kecil) -->
-      <div class="gallery-item">
-        <div class="gallery-card">
-          <img src="https://placehold.co/400x400/0d6efd/FFF?text=Pelatihan" alt="Pelatihan">
-          <div class="gallery-overlay">
-            <h6 class="fw-bold">Pelatihan Anggota</h6>
+            <div class="gallery-overlay">
+              <h5 class="fw-bold">{{ $galeri[0]->judul ?? 'Kegiatan Terbaru' }}</h5>
+            </div>
           </div>
         </div>
-      </div>
+      @endif
 
-      <!-- Gambar 3 (Kecil) -->
-      <div class="gallery-item">
-        <div class="gallery-card">
-          <img src="https://placehold.co/400x400/2a9d8f/FFF?text=Bakti+Sosial" alt="Bakti Sosial">
-          <div class="gallery-overlay">
-            <h6 class="fw-bold">Bakti Sosial</h6>
-          </div>
-        </div>
-      </div>
+      @if (isset($galeri[1]))
+        <div class="gallery-item">
+          <div class="gallery-card">
+            <img src="{{ asset('storage/' . $galeri[1]->media) }}" alt="{{ $galeri[1]->judul ?? 'Galeri' }}"
+              style="width: 100%; height: 100%; object-fit: cover;">
 
-      <!-- Gambar 4 (Lebar) -->
-      <div class="gallery-item-wide">
-        <div class="gallery-card">
-          <img src="https://placehold.co/800x400/e76f51/FFF?text=Kunjungan+Usaha" alt="Kunjungan Usaha">
-          <div class="gallery-overlay">
-            <h5 class="fw-bold">Kunjungan Usaha Anggota</h5>
-            <p class="small mb-0">Pendampingan langsung ke lokasi usaha</p>
+            <div class="gallery-overlay">
+              <h6 class="fw-bold">{{ $galeri[1]->judul ?? 'Kegiatan' }}</h6>
+            </div>
           </div>
         </div>
-      </div>
+      @endif
+
+      @if (isset($galeri[2]))
+        <div class="gallery-item">
+          <div class="gallery-card">
+            <img src="{{ asset('storage/' . $galeri[2]->media) }}" alt="{{ $galeri[2]->judul ?? 'Galeri' }}"
+              style="width: 100%; height: 100%; object-fit: cover;">
+
+            <div class="gallery-overlay">
+              <h6 class="fw-bold">{{ $galeri[2]->judul ?? 'Kegiatan' }}</h6>
+            </div>
+          </div>
+        </div>
+      @endif
+
+      @if (isset($galeri[3]))
+        <div class="gallery-item-wide">
+          <div class="gallery-card">
+            <img src="{{ asset('storage/' . $galeri[3]->media) }}" alt="{{ $galeri[3]->judul ?? 'Galeri' }}"
+              style="width: 100%; height: 100%; object-fit: cover;">
+
+            <div class="gallery-overlay">
+              <h5 class="fw-bold">{{ $galeri[3]->judul ?? 'Kegiatan Lainnya' }}</h5>
+            </div>
+          </div>
+        </div>
+      @endif
 
     </div>
   </section>
@@ -163,65 +173,31 @@
 
 
   <!-- ============================================= -->
-<!--        (BARU) BAGIAN BERITA TERBARU           -->
-<!-- ============================================= -->
-<section class="container my-5 py-5">
+  <!--        (BARU) BAGIAN BERITA TERBARU           -->
+  <!-- ============================================= -->
+  <section class="container my-5 py-5">
     <div class="container">
-        <h2 class="display-5 fw-bold text-center mb-5">Berita & Kegiatan Terbaru</h2>
-        <div class="row g-4">
-            
-            <!-- Berita 1: RAT -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://placehold.co/600x400/ced4da/white?text=RAT+2024" class="card-img-top" alt="RAT 2024">
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-bold">Koperasi TSM Sukses Menyelenggarakan RAT Tahun 2024</h5>
-                        <p class="card-text text-muted small">27 Maret 2025</p>
-                        <p class="card-text">Sebagai bentuk transparansi, Koperasi TSM telah menggelar Rapat Anggota Tahunan di Surabaya...</p>
-                        
-                        {{-- PERBAIKAN: Link diarahkan ke slug 'rat-2024' --}}
-                        <a href="{{ url('/berita/rat-2024') }}" class="btn btn-outline-primary stretched-link">Baca Selengkapnya</a>
-                    </div>
-                </div>
+      <h2 class="display-5 fw-bold text-center mb-5">Berita & Kegiatan Terbaru</h2>
+      <div class="row g-4">
+        @foreach ($berita as $item)
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="{{ asset('storage/' . $item->gambar) }}" class="card-img-top" alt="Judul Berita 1">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">{{ $item->judul_berita }}</h5>
+                <p class="card-text text-muted small">{{ $item->tanggal->format('d M Y') }}</p>
+                <p class="card-text d-inline-block text-truncate">{{ $item->isi_berita }}</p>
+                <a href="{{ url("/berita/$item->slug") }}" class="btn btn-primary mt-auto align-self-start">Baca
+                  Selengkapnya</a>
+              </div>
             </div>
-
-            <!-- Berita 2: Kantor Baru -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://placehold.co/600x400/ced4da/white?text=Kantor+Baru" class="card-img-top" alt="Kantor Baru">
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-bold">Koperasi TSM Resmi Menempati Kantor Baru</h5>
-                        <p class="card-text text-muted small">Tahun 2020</p>
-                        <p class="card-text">Untuk meningkatkan pelayanan, kami pindah ke kantor baru yang lebih representatif dan nyaman bagi anggota...</p>
-                        
-                        {{-- PERBAIKAN: Link diarahkan ke slug 'kantor-baru' --}}
-                        <a href="{{ url('/berita/kantor-baru') }}" class="btn btn-outline-primary stretched-link">Baca Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Berita 3: Pendidikan -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://placehold.co/600x400/ced4da/white?text=Pendidikan" class="card-img-top" alt="Pendidikan Anggota">
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-bold">Program Pendidikan Perkoperasian untuk Anggota</h5>
-                        <p class="card-text text-muted small">Berkelanjutan</p>
-                        <p class="card-text">Sesuai prinsip koperasi, kami rutin melaksanakan pendidikan untuk meningkatkan kemampuan anggota...</p>
-                        
-                        {{-- PERBAIKAN: 
-                             1. Teks tombol diperbaiki menjadi "Baca Selengkapnya" (bukan email)
-                             2. Link diarahkan ke slug 'pendidikan-anggota' 
-                        --}}
-                        <a href="{{ url('/berita/pendidikan-anggota') }}" class="btn btn-outline-primary stretched-link">Baca Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="text-center mt-5">
-            <a href="{{ url('/berita') }}" class="btn btn-primary btn-lg">Lihat Semua Berita</a>
-        </div>
+          </div>
+        @endforeach
+        <!-- Berita 1: RAT -->
+      </div>
+      <div class="text-center mt-5">
+        <a href="{{ url('/berita') }}" class="btn btn-primary btn-lg">Lihat Semua Berita</a>
+      </div>
     </div>
-</section>
+  </section>
 @endsection

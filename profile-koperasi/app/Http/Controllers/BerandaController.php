@@ -17,12 +17,14 @@ class BerandaController extends Controller
         $testimonis = Testimoni::where('is_active', 1)->take(3)->get();
 
         //mengambil galeri sebanyak 4 item
-        $galeris = Galeri::take(4)->get();
+        $galeri = Galeri::orderBy('sort_order', 'asc') // Urutkan dari 1, 2, 3...
+            ->take(4)
+            ->get();
 
         //mengambil berita terbari yang active sbanyak 3 item
-        $beritas = Berita::where('is_active')
-            ->take(3)
+        $berita = Berita::where('is_active', 1)
             ->latest()
+            ->take(3)
             ->get();
 
         //mengambil kontak dan sosmed yang active hanya 1 item
@@ -30,6 +32,6 @@ class BerandaController extends Controller
         $sosmed = MediaSosial::where('is_active', 1)->latest()->first();
 
         //menampilkan halaman beranda dengan data yang telah diambil
-        return view('pages.home', compact('testimonis', 'galeris', 'beritas', 'kontaks', 'sosmed'));
+        return view('pages.home', compact('testimonis', 'galeri', 'berita', 'kontaks', 'sosmed'));
     }
 }

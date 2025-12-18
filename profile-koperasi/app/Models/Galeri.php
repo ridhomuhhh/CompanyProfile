@@ -18,6 +18,7 @@ class Galeri extends Model
         'tanggal',
         'user_id',
         'is_active',
+        'sort_order',
     ];
 
     protected $casts = [
