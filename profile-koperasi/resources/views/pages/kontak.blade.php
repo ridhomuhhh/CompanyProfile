@@ -21,28 +21,28 @@
               <i class="bi bi-geo-alt-fill fs-4 text-primary me-3"></i>
               <div>
                 <h5 class="fw-bold">Alamat</h5>
-                <p class="mb-0">{{ $kontaks->alamat }}</p>
+                <p class="mb-0">{{ $kontaks?->alamat ?? 'Isi dengan alamat kantor' }}</p>
               </div>
             </li>
             <li class="d-flex align-items-start mb-3">
               <i class="bi bi-telephone-fill fs-4 text-primary me-3"></i>
               <div>
                 <h5 class="fw-bold">Telepon</h5>
-                <p class="mb-0">{{ $kontaks->telepon }}</p>
+                <p class="mb-0">{{ $kontaks?->telepon ?? 'Isi dengan nomor telepon' }}</p>
               </div>
             </li>
             <li class="d-flex align-items-start mb-3">
               <i class="bi bi-envelope-fill fs-4 text-primary me-3"></i>
               <div>
                 <h5 class="fw-bold">Email</h5>
-                <p class="mb-0">{{ $kontaks->email }}</p>
+                <p class="mb-0">{{ $kontaks?->email ?? 'Isi dengan email kantor' }}</p>
               </div>
             </li>
             <li class="d-flex align-items-start">
               <i class="bi bi-clock-fill fs-4 text-primary me-3"></i>
               <div>
                 <h5 class="fw-bold">Jam Operasional</h5>
-                <p class="mb-0">Senin - Jumat: {{ $kontaks->jam_operasional }} WIB</p>
+                <p class="mb-0">Senin - Jumat: {{ $kontaks?->jam_operasional ?? 'Isi dengan jam operasional' }} WIB</p>
               </div>
             </li>
           </ul>
@@ -53,8 +53,8 @@
         <h3 class="fw-bold mb-4">Lokasi Kami</h3>
 
         <div class="ratio ratio-16x9 rounded shadow h-100">
-          <iframe src="{{ $kontaks->maps }}" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+          <iframe src="{{ $kontaks?->maps ?? 'https://tinyurl.com/koperasitsm' }}" style="border: 0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>

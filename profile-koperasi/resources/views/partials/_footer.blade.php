@@ -19,7 +19,7 @@
 
         <h5 class="footer-title mt-3">Jam Kerja</h5>
         <ul class="footer-links">
-          <li>Senin - Jumat: 08:00 - 16:00</li>
+          <li>Senin - Jumat: {{ $kontaks?->jam_operasional }}</li>
           <li>Sabtu - Minggu: Tutup</li>
         </ul>
       </div>

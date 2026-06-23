@@ -19,9 +19,9 @@ return new class extends Migration
             $table->boolean('is_active')->default(true);
             $table->string('deskripsi', 255)->nullable();
             $table->string('nama_anggota', 255)->nullable();
+            $table->string('role')->nullable();
             $table->string('jabatan', 100)->nullable();
             $table->string('foto', 255)->nullable();
-
 
             $table->timestamps();
         });

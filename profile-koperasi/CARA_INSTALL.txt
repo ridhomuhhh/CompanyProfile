@@ -1,0 +1,29 @@
+PANDUAN INSTALASI PROJECT (MYSQL):
+
+1. Ekstrak folder project.
+2. Buka terminal di dalam folder project.
+3. Jalankan perintah: 
+   composer install
+4. Jalankan perintah: 
+   npm install && npm run build
+5. Copy file ".env.example" lalu rename menjadi ".env".
+6. Buka file ".env", atur konfigurasi database:
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=nama_database
+   DB_USERNAME=root
+   DB_PASSWORD=
+7. Buat database baru di phpMyAdmin sesuai nama di atas (DB_DATABASE).
+8. Import file "db_koperasi_1.sql" yang saya sertakan ke dalam database tersebut di phpMyAdmin.
+   (Langkah ini agar akun admin masuk ke dalam database).
+9. Kembali ke terminal, jalankan: 
+   php artisan key:generate
+10. Jalankan: 
+    php artisan storage:link
+11. Jalankan server: 
+    php artisan serve
+
+Akun Login Admin:
+Email: (admin@example.com)
+Pass: (123)

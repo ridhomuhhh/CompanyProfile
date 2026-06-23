@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('alamat')->nullable();
             $table->string('telepon', 20)->nullable();
             $table->string('email', 100)->nullable();
-            $table->string('maps', 255)->nullable();
+            $table->text('maps')->nullable();
             $table->string('jam_operasional', 100)->nullable();
 
             $table->timestamps();

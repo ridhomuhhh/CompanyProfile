@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('judul', 100)->nullable();
             $table->string('media', 255)->nullable();
             $table->dateTime('tanggal')->nullable();
-
+            $table->integer('sort_order')->default(0);
 
             $table->timestamps();
         });
