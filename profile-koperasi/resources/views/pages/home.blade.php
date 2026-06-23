@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @push('styles')
-  {{-- Kita hanya perlu CDN ikon di sini. CSS lainnya sudah via app.css --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 @endpush
 
@@ -16,8 +15,7 @@
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active"
-        style="background-image: url('https://placehold.co/1920x800/0d6efd/white?text=Koperasi+TSM')">
+      <div class="carousel-item active" style="background-image: url('https://cdn.wallpapersafari.com/1/72/14W9Zo.jpg')">
         <div class="container">
           <div class="carousel-caption text-start">
             <h1 class="display-5 fw-bold">Koperasi TSM</h1>
@@ -27,7 +25,7 @@
         </div>
       </div>
       <div class="carousel-item"
-        style="background-image: url('https://placehold.co/1920x800/2a9d8f/white?text=Layanan+Kami')">
+        style="background-image: url('https://painrelieffoundation.org.uk/wp-content/uploads/2020/10/corporate-image-2.jpg')">
         <div class="container">
           <div class="carousel-caption">
             <h1>Bantuan Peminjaman Modal</h1>
@@ -81,70 +79,62 @@
     </div>
 
     <div class="gallery-grid">
-
-      @if (isset($galeri[0]))
-        <div class="gallery-item-main">
-          <div class="gallery-card">
-            <img src="{{ asset('storage/' . $galeri[0]->media) }}" alt="{{ $galeri[0]->judul ?? 'Galeri Utama' }}"
-              style="width: 100%; height: 100%; object-fit: cover;">
-
-            <div class="gallery-overlay">
-              <h5 class="fw-bold">{{ $galeri[0]->judul ?? 'Kegiatan Terbaru' }}</h5>
-            </div>
+      <div class="gallery-item-main">
+        <div class="gallery-card">
+          <img
+            src="{{ isset($galeri[0]) && $galeri[0]->media ? asset('storage/' . $galeri[0]->media) : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png' }}"
+            alt="{{ $galeri[0]->judul ?? 'Galeri Kosong' }}" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="gallery-overlay">
+            <h5 class="fw-bold">{{ $galeri[0]->judul ?? 'Slot Kosong' }}</h5>
           </div>
         </div>
-      @endif
+      </div>
 
-      @if (isset($galeri[1]))
-        <div class="gallery-item">
-          <div class="gallery-card">
-            <img src="{{ asset('storage/' . $galeri[1]->media) }}" alt="{{ $galeri[1]->judul ?? 'Galeri' }}"
-              style="width: 100%; height: 100%; object-fit: cover;">
-
-            <div class="gallery-overlay">
-              <h6 class="fw-bold">{{ $galeri[1]->judul ?? 'Kegiatan' }}</h6>
-            </div>
+      <div class="gallery-item">
+        <div class="gallery-card">
+          <img
+            src="{{ isset($galeri[1]) && $galeri[1]->media ? asset('storage/' . $galeri[1]->media) : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png' }}"
+            alt="{{ $galeri[1]->judul ?? 'Galeri Kosong' }}" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="gallery-overlay">
+            <h5 class="fw-bold">{{ $galeri[1]->judul ?? 'Slot Kosong' }}</h5>
           </div>
         </div>
-      @endif
+      </div>
 
-      @if (isset($galeri[2]))
-        <div class="gallery-item">
-          <div class="gallery-card">
-            <img src="{{ asset('storage/' . $galeri[2]->media) }}" alt="{{ $galeri[2]->judul ?? 'Galeri' }}"
-              style="width: 100%; height: 100%; object-fit: cover;">
-
-            <div class="gallery-overlay">
-              <h6 class="fw-bold">{{ $galeri[2]->judul ?? 'Kegiatan' }}</h6>
-            </div>
+      <div class="gallery-item">
+        <div class="gallery-card">
+          <img
+            src="{{ isset($galeri[2]) && $galeri[2]->media ? asset('storage/' . $galeri[2]->media) : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png' }}"
+            alt="{{ $galeri[2]->judul ?? 'Galeri Kosong' }}" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="gallery-overlay">
+            <h5 class="fw-bold">{{ $galeri[2]->judul ?? 'Slot Kosong' }}</h5>
           </div>
         </div>
-      @endif
+      </div>
 
-      @if (isset($galeri[3]))
-        <div class="gallery-item-wide">
-          <div class="gallery-card">
-            <img src="{{ asset('storage/' . $galeri[3]->media) }}" alt="{{ $galeri[3]->judul ?? 'Galeri' }}"
-              style="width: 100%; height: 100%; object-fit: cover;">
-
-            <div class="gallery-overlay">
-              <h5 class="fw-bold">{{ $galeri[3]->judul ?? 'Kegiatan Lainnya' }}</h5>
-            </div>
+      <div class="gallery-item-wide">
+        <div class="gallery-card">
+          <img
+            src="{{ isset($galeri[3]) && $galeri[3]->media ? asset('storage/' . $galeri[3]->media) : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png' }}"
+            alt="{{ $galeri[3]->judul ?? 'Galeri Kosong' }}" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="gallery-overlay">
+            <h5 class="fw-bold">{{ $galeri[3]->judul ?? 'Slot Kosong' }}</h5>
           </div>
         </div>
-      @endif
+      </div>
 
     </div>
   </section>
   <!-- Akhir Bagian Galeri -->
-
-
   <!-- ============================================= -->
-  <!--       (BARU) BAGIAN TESTIMONI ANGGOTA         -->
+  <!--           BAGIAN TESTIMONI ANGGOTA            -->>
   <!-- ============================================= -->
   <section class="container-fluid bg-light my-5 py-5">
     <div class="container">
       <h2 class="display-5 fw-bold text-center mb-5">Apa Kata Anggota Kami?</h2>
+      @if ($testimonis->isEmpty())
+        <p class="text-center">Belum ada testimonial anggota.</p>
+      @endif
       <div class="row g-4 flex justify-content-center">
         @foreach ($testimonis as $item)
           <div class="col-md-4">
@@ -170,14 +160,15 @@
       </div>
     </div>
   </section>
-
-
   <!-- ============================================= -->
   <!--        (BARU) BAGIAN BERITA TERBARU           -->
   <!-- ============================================= -->
   <section class="container my-5 py-5">
     <div class="container">
       <h2 class="display-5 fw-bold text-center mb-5">Berita & Kegiatan Terbaru</h2>
+      @if ($berita->isEmpty())
+        <p class="text-center">Belum ada berita terbaru.</p>
+      @endif
       <div class="row g-4">
         @foreach ($berita as $item)
           <div class="col-md-4">
@@ -193,7 +184,6 @@
             </div>
           </div>
         @endforeach
-        <!-- Berita 1: RAT -->
       </div>
       <div class="text-center mt-5">
         <a href="{{ url('/berita') }}" class="btn btn-primary btn-lg">Lihat Semua Berita</a>

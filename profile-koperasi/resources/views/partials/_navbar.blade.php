@@ -43,7 +43,7 @@
         </li>
       </ul>
 
-      <a class="btn btn-primary d-none d-lg-flex" href="https://wa.me/62{{ (int) $kontaks->telepon }}" role="button">
+      <a class="btn btn-primary d-none d-lg-flex" href="https://wa.me/62{{ (int) $kontaks?->telepon }}" role="button">
         GABUNG SEKARANG &rarr;
       </a>
 

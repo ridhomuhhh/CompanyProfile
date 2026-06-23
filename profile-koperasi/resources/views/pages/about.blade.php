@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @push('styles')
-  {{-- CDN untuk Bootstrap Icons (dipakai di bagian Prinsip & Tujuan) --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 @endpush
 
@@ -16,15 +15,18 @@
 
       <div class="col-lg-6">
         <h2 class="display-5 fw-bold">Tentang Koperasi TSM</h2>
+        <p class="lead text-muted">
+          {{ $tentangKami?->sejarah ?? 'Content is being edited' }}
+        </p>
         <h3 class="h4 text-primary mt-4">Visi</h3>
         <p class="lead text-muted">
-          "{{ $tentangKami->visi }}"
+          "{{ $tentangKami?->visi ?? 'Content is being edited' }}"
         </p>
 
         <h3 class="h4 text-primary mt-4">Misi</h3>
         <ul class="lead text-muted ps-3" style="list-style-type: disc;">
-          @foreach ($tentangKami->misi as $item)
-            <li>"{{ $item }}"</li>
+          @foreach ($tentangKami?->misi ?? ['Content is being edited', 'Content is being edited', 'Content is being edited'] as $item)
+            <li>{{ $item }}</li>
           @endforeach
         </ul>
       </div>
@@ -93,7 +95,7 @@
         @foreach ($struktur as $item)
           @php
             if ($item->role == 'pengawas') {
-                continue; // Lewati iterasi untuk pengawas
+                continue;
             }
           @endphp
           <div class="col-md-3 col-sm-6">

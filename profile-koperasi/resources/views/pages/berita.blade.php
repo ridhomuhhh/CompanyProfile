@@ -5,7 +5,8 @@
     <div class="row">
       <div class="col text-center">
         <h1 class="display-4 fw-bold">Berita Terbaru</h1>
-        <p class="lead text-muted">Informasi dan kegiatan terkini dari Koperasi BUMI.</p>
+        <p class="lead text-muted">
+          {{ count($allBerita) > 0 ? 'Informasi dan kegiatan terkini dari Koperasi TSM.' : 'Berita kosong' }}</p>
       </div>
     </div>
   </section>
